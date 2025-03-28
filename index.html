@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Kushagra Bisht | Cloud Computing and Virtualization</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic CSS for styling - You can replace this with your style.css content */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #007bff;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        header {
+            background-color: #e9f4ff;
+            padding: 50px 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-img-wrapper {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 50px;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%; /* Default: center center */
+            display: block;
+        }
+
+        .profile-text h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .profile-text p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .contact-info-header {
+            margin-top: 20px;
+        }
+
+        .contact-info-header p {
+            margin: 5px 0;
+        }
+
+        .section-title {
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #007bff;
+        }
+
+        #about .about-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #about .about-text {
+            max-width: 700px;
+        }
+
+        #about .about-text p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .skills-highlight {
+            margin-top: 20px;
+        }
+
+        .skill-badge {
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 0.9em;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: #007bff;
+            margin-right: 15px;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        #projects .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-info h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .project-tech {
+            margin-bottom: 15px;
+        }
+
+        .tech-tag {
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 3px 8px;
+            border-radius: 3px;
+            margin-right: 5px;
+            font-size: 0.85em;
+        }
+
+        .project-links a {
+            color: #007bff;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: 500;
+        }
+
+        #skills .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-item {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .skill-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        .skill-item h4 {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .skill-item p {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        #contact .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-form h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+
+        footer .container p {
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="nav-logo">Kushagra Bisht</a>
+            <ul>
+                <li><a href="#about" class="active">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container header-content">
+            <div class="profile-img-wrapper">
+                <img src="kushagraphoto2.jpg" alt="Kushagra Bisht" class="profile-img">
+            </div>
+            <div class="profile-text">
+                <h1>Kushagra Bisht</h1>
+                <p>Cloud Computing and Virtualization Student</p>
+                <div class="contact-info-header">
+                    <p><i class="fas fa-phone"></i> +91 9311508608</p>
+                    <p><i class="fas fa-envelope"></i> kushagrabisht10@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Delhi, India</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Driven B.Tech student at UPES Dehradun with a focus on Cloud Computing and Virtualization. 
+                        Eager to apply skills in DSA, MERN Full Stack Development, and Cloud Computing to real-world projects. 
+                        Possesses a strong foundation in web development, database management, and cloud technologies.
+                    </p>
+                    <p>
+                        Seeking opportunities to leverage my technical skills and contribute to innovative solutions. 
+                        Experienced in team leadership, event management, and effective communication.
+                    </p>
+                    <p>
+                        <b>Internships:</b>
+                    </p>
+                    <ul>
+                        <li>
+                            Unifiers Social Ventures, Summer Internship (May-July 2023)
+                            <ul>
+                                <li>Gained hands-on experience in web data scraping using Python's Beautiful Soup library.</li>
+                                <li>Extracted critical data from startup websites, including owners' names, email addresses, and contact numbers.</li>
+                                <li>Contributed to the organization's database by collecting and organizing verified information from various online sources.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            BioPay, Backend Intern (Feb 2025-April 2025)
+                            <ul>
+                                <li>Developed server-side API for a payment system utilizing palm vein scan technology.</li>
+                                <li>Worked with biometric data from Fujitsu palm scanners.</li>
+                                <li>Learned and utilized Node.js and Express.js for backend development.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>UPES Campus Navigation System</h3>
+                        <p class="project-description">
+                            Developed a campus navigation system using Dijkstra's algorithm to find the shortest paths.
+                            Implemented in Python with a focus on real-time performance and accuracy.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Dijkstra's Algorithm</span>
+                            <span class="tech-tag">Graph Theory</span>
+                        </div>
+                        </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <i class="fas fa-code skill-icon"></i>
+                    <h4>Programming</h4>
+                    <p>C++, Python</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-laptop-code skill-icon"></i>
+                    <h4>MERN Full Stack Development</h4>
+                    <p>MongoDB, Express.js, React, Node.js</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database skill-icon"></i>
+                    <h4>Databases</h4>
+                    <p>SQL</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-aws skill-icon"></i>
+                    <h4>Cloud Computing</h4>
+                    <p>Amazon AWS, OpenStack (Basics)</p>
+                </div>
+                 <div class="skill-item">
+                    <i class="fab fa-docker skill-icon"></i>
+                    <h4>DevOps</h4>
+                    <p>Docker</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-users skill-icon"></i>
+                    <h4>Soft Skills</h4>
+                    <p>Team Leadership, Communication, Event Management</p>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Delhi, India</p>
+                    <p><i class="fas fa-phone"></i> +91 9311508608</p>
+                    <p><i class="fas fa-envelope"></i> kushagrabisht10@gmail.com</p>
+                    <div class="social-links" style="margin-top: 1.5rem;">
+                        <a href="https://github.com/kushagrabisht05" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send me a message</h3>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kushagra Bisht. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Basic navigation active class toggle
+        const navLinks = document.querySelectorAll('nav a');
+        const sections = document.querySelectorAll('section');
+
+        function setActiveLink() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (pageYOffset >= (sectionTop - 60) && pageYOffset < (sectionTop + sectionHeight - 60)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', setActiveLink);
+
+        // Set "About" as active on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const aboutLink = document.querySelector('nav a[href="#about"]');
+            if (aboutLink) {
+                aboutLink.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
