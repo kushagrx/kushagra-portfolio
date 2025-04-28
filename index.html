@@ -300,6 +300,23 @@
         footer .container p {
             font-size: 0.9em;
         }
+
+        .project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project-link:hover .project-card {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
     </style>
 </head>
 <body>
@@ -373,42 +390,95 @@
     </section>
 
 
-<section id="projects">
+    <section id="projects">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
+            <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>UPES Campus Navigation System</h3>
-                        <p class="project-description">
-                            Developed a campus navigation system using Dijkstra's algorithm to find the shortest paths.
-                            Modeled the campus as a graph, with places as nodes and paths as edges, to calculate the most
-                            efficient routes between locations. Implemented in Python with a focus on real-time performance and accuracy.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Dijkstra's Algorithm</span>
-                            <span class="tech-tag">Graph Theory</span>
+    
+                <!-- Project 1 -->
+                <a href="https://yourproject1link.com" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>Campus Navigation System</h3>
+                            <p class="project-description">Dijkstra’s algorithm-based web app to find the 
+                                shortest path across campus buildings.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Dijkstra</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
                         </div>
-                        </div>
-                </div>
+                    </div>
+                </a>
 
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>File Sharing System via NFC</h3>
-                        <p class="project-description">
-                            Designed and implemented a file-sharing system leveraging Near Field Communication (NFC) for seamless data transfer between devices.  Mirrored functionality of applications like ShareIt with a focus on enhancing user experience through physical NFC interaction.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Android Development</span>
-                            <span class="tech-tag">NFC Technology</span>
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Backend (if applicable)</span>  </div>
+                <a href="" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>File Sharing System via NFC</h3>
+                            <p class="project-description">
+                                Designed and implemented a file-sharing system leveraging (NFC) for seamless data 
+                                transfer between devices and mirrored functionality of applications like ShareIt .
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Android Development</span>
+                                <span class="tech-tag">NFC Technology</span>
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Backend</span>
+                            </div>
                         </div>
-                </div>
-                </div>
+                    </div>
+                </a>
+    
+        
+                <a href="https://my-dockyard-kshkwzxvwuwn3xkefwlty2.streamlit.app/" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>Diabetes Prediction App</h3>
+                            <p class="project-description">Streamlit app using Machine Learning to predict diabetes based on healthcare data.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://my-dockyard-dmvevk3qhtmagypg2yffpv.streamlit.app/" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>Stock Analysis App</h3>
+                            <p class="project-description">Streamlit app using Machine Learning to predict predict stock analysis based on real world data.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://my-dockyard-9hbsehoxjeavwoamlcx77w.streamlit.app/" target="_blank" class="project-link">
+                    <div class="project-card">
+                        <div class="project-info">
+                            <h3>Mushroom Classification App</h3>
+                            <p class="project-description">Streamlit python app using Machine Learning to classify mushrooms based on their features.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+    
+                <!-- More projects... -->
+    
+            </div>
         </div>
     </section>
+    
 
     <section id="skills">
         <div class="container">
